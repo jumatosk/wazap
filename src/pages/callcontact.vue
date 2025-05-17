@@ -16,10 +16,17 @@ const handleInput = (e) => {
 
 const handleOpenConversation = () => {
   const cleanedNumber = cleanNumber(number.value);
-sendMessage(cleanedNumber, message.value);
+  sendMessage(cleanedNumber, message.value);
 };
 </script>
 <template>
+  <div class="logo-container">
+    <label>
+      Wazap
+      <i class="fa-brands fa-whatsapp"></i>
+    </label>
+    <p>Abra uma conversa sem precisar salvar o número na sua agenda.</p>
+  </div>
   <div class="input-container">
     <div class="input-wrapper">
       <i class="fa fa-phone"></i>
@@ -40,6 +47,11 @@ sendMessage(cleanedNumber, message.value);
   <button @click="handleOpenConversation">Abrir no whatsapp</button>
 </template>
 <style scoped>
+.logo-container label:first-child {
+  font-size: 48px;
+  font-weight: bold;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
