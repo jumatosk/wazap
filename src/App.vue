@@ -1,5 +1,5 @@
 <script setup>
-import callcontact from './pages/callcontact.vue';
+import callcontact from './pages/callcontact/index.vue';
 </script>
 
 <template>
