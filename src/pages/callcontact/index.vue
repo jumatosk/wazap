@@ -44,7 +44,9 @@ const handleOpenConversation = () => {
         class="message-input"
         rows="4"
       />
-      <button @click="handleOpenConversation">Abrir no whatsapp</button>
+      <button @click="handleOpenConversation" :disabled="!number.value">
+        Abrir <i class="fa-brands fa-whatsapp"></i>
+      </button>
     </section>
   </section>
 </template>
