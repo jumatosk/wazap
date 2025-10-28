@@ -21,28 +21,30 @@ const handleOpenConversation = () => {
 };
 </script>
 <template>
-  <div class="logo-container">
-    <label>
-      Wazap
-      <i class="fa-brands fa-whatsapp"></i>
-    </label>
-    <p>Abra uma conversa sem precisar salvar o número na sua agenda.</p>
-  </div>
-  <div class="input-container">
-    <div class="input-wrapper">
-      <i class="fa fa-phone"></i>
-      <input
-        v-model="number.value"
-        @input="handleInput"
-        placeholder="Digite somente o número com DDD"
+  <section class="container">
+    <section class="logo-container">
+      <label>
+        Wazap
+        <i class="fa-brands fa-whatsapp"></i>
+      </label>
+      <p>Converse sem salvar o número na agenda.</p>
+    </section>
+    <section class="form-container">
+      <div class="input-wrapper">
+        <i class="fa fa-phone"></i>
+        <input
+          v-model="number.value"
+          @input="handleInput"
+          placeholder="(**) *****-****"
+        />
+      </div>
+      <textarea
+        v-model="message.value"
+        placeholder="Digite uma mensagem..."
+        class="message-input"
+        rows="4"
       />
-    </div>
-    <textarea
-      v-model="message.value"
-      placeholder="Digite algo..."
-      class="message-input"
-      rows="4"
-    />
-    <button @click="handleOpenConversation">Abrir no whatsapp</button>
-  </div>
+      <button @click="handleOpenConversation">Abrir no whatsapp</button>
+    </section>
+  </section>
 </template>
